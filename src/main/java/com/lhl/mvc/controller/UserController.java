@@ -12,8 +12,9 @@ import javax.servlet.http.HttpServletRequest;
  * Created by lenovo on 2016/3/24.
  */
 @Controller
+@RequestMapping("/user")
 public class UserController {
-    @RequestMapping("/user")
+    @RequestMapping("/getUser/{id}")
     public ModelAndView view(@PathVariable("id") Long id, HttpServletRequest req) {
         User user = new User();
         user.setId(id);
